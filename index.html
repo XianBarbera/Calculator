@@ -1,45 +1,60 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator">
+        <div class="calculator-input">
+          <input type="number" size="100" id="calculator-input" />
+        </div>
 
-<body>
+        <div class="calator-menu">
+          <div class="calculator-menu-left">
+            <span>HISTORY</span>
+            <i class="material-icons">straighten</i>
+            <i class="material-icons">calculate</i>
+          </div>
 
-  <div class="grid-container">
-    <div class="item1"><input type="number" size="100"></div>
-    <div class="item2"><button type="button">HISTORY</button>
-      <button type="button">UNIT CONVERTER</button>
-      <button type="reset">DELETE</button>
+          <div class="calculator-menu-right">
+            <i class="material-icons" style="color: rgb(141, 162, 226)">backspace</i>
+          </div>
+        </div>
+
+        <div class="calculator-numeric-table">
+          <button class="numeric-red" onclick="input.clear()">C</button>
+          <button class="numeric-blue">( )</button>
+          <button class="numeric-blue">%</button>
+          <button class="numeric-blue">÷</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="numeric-blue">×</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="numeric-blue">−</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="numeric-blue" onclick="calculator.sum()">+</button>
+          <button>+/-</button>
+          <button>0</button>
+          <button>.</button>
+          <button class="equal" onclick="calculator.getResult()">=</button>
+        </div>
+      </div>
+      <span id="current-value"></span>
+      <span id="result"></span>
     </div>
-    <div class="item3">
-      <div><button type="button"><span style="color:red"><b> C</b></button></div>
-      <div><button type="button"><span style="color:blue"><b>( )</b></span></button></div>
-      <div><button type="button"><span style="color:blue"><b>%</b></span></button></div>
-      <div><button type="button"><span style="color:blue"><b> ÷</b></span></button></div>
-      <div><button type="button">7</button></div>
-      <div><button type="button">8</button></div>
-      <div><button type="button">9</button></div>
-      <div><button type="button"><span style="color:blue"><b> ×</b></button></div>
-      <div><button type="button">4</button></div>
-      <div><button type="button">5</button></div>
-      <div><button type="button">6</button></div>
-      <div><button type="button"><span style="color:blue"><b> −</b></button></div>
-      <div><button type="button">1</button></div>
-      <div><button type="button">2</button></div>
-      <div><button type="button">3</button></div>
-      <div><button type="button"><span style="color:blue"><b> +</b></button></div>
-      <div><button type="button">+/-</button></div>
-      <div><button type="button">0</button></div>
-      <div><button type="button"><span style="color:black"><b> .</b></button></div>
-      <div class="equal"><button type="button">=</button></div>
-    </div>
 
-
-  </div>
-
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>
